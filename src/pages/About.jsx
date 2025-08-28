@@ -1,15 +1,19 @@
+// ---------- src/pages/About.jsx
 export default function About() {
-  return (
-    <div className="p-8">
-      <h2 className="text-3xl font-semibold mb-4">About Us</h2>
-      <p className="mb-2">
-        Nrityotkarsh was founded to preserve and promote the classical dance form of Odissi.
-      </p>
-      <h3 className="text-2xl font-semibold mt-6 mb-2">Teacher Bio</h3>
-      <p>
-        Guru Smt. Ratna Bharati Acharya has been teaching Odissi since 2019, with decades of dedication 
-        to classical dance and training students of all ages.
-      </p>
-    </div>
-  );
+return (
+<div>
+<h2 className="text-2xl md:text-3xl font-semibold mb-4">About Us</h2>
+<p className="mb-6 text-gray-700">
+Our dance school has been teaching Odissi, one of the eight classical dance forms of India, since 2019. We aim to
+inculcate discipline, devotion, and artistic excellence in our students while keeping alive the rich cultural heritage of Odisha.
+</p>
+
+<div className="rounded-2xl shadow bg-white p-6">
+<h3 className="text-xl md:text-2xl font-bold mb-2">Teacher Bio</h3>
+<p className="text-gray-700">
+Guru [Your Name] has extensive experience in Odissi and has performed nationally and internationally. Passionate about training young learners, the focus is on strong foundations, abhinaya, and the spiritual essence of dance.
+</p>
+</div>
+</div>
+)
 }
