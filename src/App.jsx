@@ -4,20 +4,23 @@ import Home from './pages/Home'
 import About from './pages/About'
 import VideoGallery from './pages/VideoGallery'
 import Contact from './pages/Contact'
+import Blog from './pages/Blog'
 import Footer from './components/Footer'
 
 function NavLink({ to, children }) {
-const { pathname } = useLocation()
-const active = pathname === to
-return (
-<Link
-to={to}
-className={`px-2 py-1 rounded-md transition-colors ${active ? 'bg-rose-700 text-white' : 'text-rose-50 hover:text-amber-300'}`}
->
-{children}
-</Link>
-)
-}
+  const { pathname } = useLocation()
+  const active = pathname === to
+  return (
+    <Link
+      to={to}
+      className={`px-2 py-1 rounded-md transition-colors ${
+        active ? 'bg-rose-700 text-white' : 'text-rose-50 hover:text-amber-300'
+      }`}
+    >
+      {children}
+    </Link>
+  )
+};
 
 export default function App() {
 return (
@@ -28,6 +31,7 @@ return (
 <NavLink to="/">Home</NavLink>
 <NavLink to="/about">About Us</NavLink>
 <NavLink to="/gallery">Video Gallery</NavLink>
+<NavLink to="/blog">Blog</NavLink>
 <NavLink to="/contact">Contact Us</NavLink>
 </nav>
 </div>
@@ -38,6 +42,7 @@ return (
 <Route path="/" element={<Home />} />
 <Route path="/about" element={<About />} />
 <Route path="/gallery" element={<VideoGallery />} />
+<Route path="/blog" element={<Blog />} />
 <Route path="/contact" element={<Contact />} />
 </Routes>
 </main>

@@ -8,6 +8,7 @@ return (
 <a className="hover:text-amber-300" href="/">Home</a>
 <a className="hover:text-amber-300" href="/about">About</a>
 <a className="hover:text-amber-300" href="/gallery">Gallery</a>
+<a className="hover:text-amber-300" href="/blog">Blog</a>
 <a className="hover:text-amber-300" href="/contact">Contact</a>
 </div>
 </div>
