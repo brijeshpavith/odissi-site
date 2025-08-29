@@ -1,22 +1,37 @@
 // ---------- src/App.jsx
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import VideoGallery from './pages/VideoGallery'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
 
+function NavLink({ to, children }) {
+const { pathname } = useLocation()
+const active = pathname === to
+return (
+<Link
+to={to}
+className={`px-2 py-1 rounded-md transition-colors ${active ? 'bg-rose-700 text-white' : 'text-rose-50 hover:text-amber-300'}`}
+>
+{children}
+</Link>
+)
+}
+
 export default function App() {
 return (
-<div className="bg-gray-50 min-h-screen flex flex-col">
-<nav className="bg-white shadow p-4">
-<div className="max-w-5xl mx-auto flex items-center gap-6 text-sm md:text-base">
-<Link className="hover:text-blue-600" to="/">Home</Link>
-<Link className="hover:text-blue-600" to="/about">About Us</Link>
-<Link className="hover:text-blue-600" to="/gallery">Video Gallery</Link>
-<Link className="hover:text-blue-600" to="/contact">Contact Us</Link>
-</div>
+<div className="bg-rose-50 min-h-screen flex flex-col">
+<header className="bg-gradient-to-r from-rose-800 to-rose-700 text-rose-50">
+<div className="max-w-5xl mx-auto w-full px-4">
+<nav className="flex items-center gap-4 py-3">
+<NavLink to="/">Home</NavLink>
+<NavLink to="/about">About Us</NavLink>
+<NavLink to="/gallery">Video Gallery</NavLink>
+<NavLink to="/contact">Contact Us</NavLink>
 </nav>
+</div>
+</header>
 
 <main className="flex-1 max-w-5xl mx-auto w-full p-6 md:p-8">
 <Routes>

@@ -1,2 +1,8 @@
-/* ---------- src/index.css*/
+/* ---------- src/index.css */
 @import "tailwindcss";
+
+/* Theme tweaks: headings & link focus */
+@layer base {
+h1, h2, h3 { @apply text-rose-900; }
+a { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm; }
+}
