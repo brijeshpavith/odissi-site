@@ -11,7 +11,7 @@ inculcate discipline, devotion, and artistic excellence in our students while ke
 <div className="rounded-2xl shadow bg-white p-6">
 <h3 className="text-xl md:text-2xl font-bold mb-2">Teacher Bio</h3>
 <p className="text-gray-700">
-Guru [Your Name] has extensive experience in Odissi and has performed nationally and internationally. Passionate about training young learners, the focus is on strong foundations, abhinaya, and the spiritual essence of dance.
+Guru Smt. Ratna Bharati Acharya has extensive experience in Odissi and has performed nationally and internationally. Passionate about training young learners, the focus is on strong foundations, abhinaya, and the spiritual essence of dance.
 </p>
 </div>
 </div>
